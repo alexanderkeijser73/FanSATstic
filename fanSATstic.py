@@ -31,9 +31,19 @@ systematic_search_algs = [DAVIS_PUTNAM, DPLL]
 # Variable selection heuristics
 MOST_OFTEN = 'most_often'
 MOST_EQUILIBRATED = 'most_equilibrated'
+MOM = 'mom'
+JWOS = 'jwos'
+JWTS = 'jwts'
+DLCS = 'dlcs'
+DLIS = 'dlis'
 var_selection_heuristics = { 
                     MOST_OFTEN : heuristics.mostOftenVariable,
-                    MOST_EQUILIBRATED : heuristics.mostEqulibratedVariable
+                    MOST_EQUILIBRATED : heuristics.mostEqulibratedVariable,
+                    MOM : heuristics.mom,
+                    JWOS : heuristics.jwOS,
+                    JWPS : heuristics.jwTS,
+                    DLCS : heuristics.dlcs,
+                    DLIS : heuristics.dlis  
                                 }
 
 # Some output formats
