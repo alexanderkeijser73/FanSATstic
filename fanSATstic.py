@@ -41,7 +41,7 @@ var_selection_heuristics = {
                     MOST_EQUILIBRATED : heuristics.mostEqulibratedVariable,
                     MOM : heuristics.mom,
                     JWOS : heuristics.jwOS,
-                    JWPS : heuristics.jwTS,
+                    JWTS : heuristics.jwTS,
                     DLCS : heuristics.dlcs,
                     DLIS : heuristics.dlis  
                                 }

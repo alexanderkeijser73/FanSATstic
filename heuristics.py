@@ -98,7 +98,7 @@ def jwOS(var_range, litclauses):
         j_value = 0
     
         try:
-            v_clauses = litclauses[v])
+            v_clauses = litclauses[v]
             for clause in v_clauses:
             	j_value += 2**(-len(clause)) 
         except KeyError:
@@ -131,14 +131,14 @@ def jwTS(var_range, litclauses):
         jpos_value, jneg_value = 0
     
         try:
-            vpos_clauses = litclauses[v])
+            vpos_clauses = litclauses[v]
             for pos_clause in vpos_clauses:
             	jpos_value += 2**(-len(pos_clause)) 
         except KeyError:
             pass
             
         try:
-            vneg_clauses = litclauses[-v])
+            vneg_clauses = litclauses[-v]
             for neg_clause in vneg_clauses:
             	jneg_value += 2**(-len(neg_clause)) 
         except KeyError:
@@ -150,7 +150,7 @@ def jwTS(var_range, litclauses):
             best = j_value           
             if jneg_value > jpos_value:
             	var = -v	#MAYBE ERROR FOR v=0
-        	else:
+            else:
             	var = v
             
     return var
@@ -177,13 +177,13 @@ def dlcs(var_range, litclauses):
 
         
         try:
-        	vp = len(litclauses[v])
-            times += vp 
+            vp = len(litclauses[v])
+            times += vp
         except KeyError:
             pass
         
         try:
-        	vn = len(litclauses[-v])
+            vn = len(litclauses[-v])
             times += vn
         except KeyError:
             pass
@@ -192,7 +192,7 @@ def dlcs(var_range, litclauses):
             best = times            
             if vn > vp:
             	var = -v #MAYBE ERROR FOR v=0
-        	else:
+            else:
             	var = v
             
     return var
@@ -219,7 +219,7 @@ def dlis(var_range, litclauses):
         try:
         	times = len(litclauses[v])
 	        if times > best:
-        	var = v #MAYBE ERROR FOR v=0 
+        	   var = v #MAYBE ERROR FOR v=0 
         except KeyError:
             pass
             
